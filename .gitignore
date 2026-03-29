@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+dist/
+
+# Environment Variables (Sangat Penting!)
+.env
+
+# Database (Jangan simpan file data mentah)
+*.log
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
