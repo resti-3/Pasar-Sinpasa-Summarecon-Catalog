@@ -14,11 +14,12 @@ Semua anggota tim berkontribusi dalam perancangan **UI/UX & Analisis HCI** (User
 
 ## 🚀 Fitur Utama
 - **Katalog Toko:** Daftar toko lengkap dengan kategori.
-- **Filter Cerdas:** Mencari toko berdasarkan keberadaan produk spesifik (Hasil filter menunjukkan toko dengan kecocokan produk terbanyak).
-- **Sistem Rating & Testimoni:** - Testimoni dan rating mendalam untuk setiap Toko.
-  - Rating ringkas untuk setiap Produk.(~)
-- **Galeri Foto:** Maksimal 3 foto untuk profil toko dan 1 foto untuk setiap produk.
-- **User-Centered Design:** Antarmuka yang dirancang berdasarkan prinsip HCI (Jacob's Law) dan hasil observasi lapangan.
+- **Filter Cerdas:** Mencari toko berdasarkan kategori produk yang dijual.
+- **Sistem Rating & Testimoni:** 
+  - Testimoni Sinpasa
+  - Testimoni untuk setiap Toko.
+- **Galeri Foto:** Maksimal 3 foto untuk setiap profil toko.
+- **User-Centered Design:** Antarmuka yang dirancang berdasarkan prinsip HCI dan hasil observasi lapangan.
 
 ## 🛠 Tech Stack
 - **Frontend:** HTML, CSS, JavaScript/Laravel(UAS)
