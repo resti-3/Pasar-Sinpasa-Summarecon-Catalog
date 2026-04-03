@@ -46,10 +46,10 @@ Semua anggota tim berkontribusi dalam perancangan **UI/UX & Analisis HCI** (User
 ```text
 .
 ├── src/             # Source code (Frontend)
-    ├── css/         # css
-    ├── img/         # gambar
-    ├── js/          # logika js
-    └── pages/       # file hmtl
+|   ├── css/         # css
+|   ├── img/         # gambar
+|   ├── js/          # logika js
+|   └── pages/       # file hmtl
 ├── docs/            # Dokumentasi, Link Figma, & Laporan 
 ├── .gitignore/
 ├── LICENSE/
