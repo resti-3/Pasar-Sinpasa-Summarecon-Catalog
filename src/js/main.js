@@ -96,3 +96,55 @@ document.addEventListener("DOMContentLoaded", function () {
   applyFilter();
 
 });
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+let isClicking = false;
+
+// CLICK NAVBAR
+navLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    isClicking = true;
+
+    navLinks.forEach(l => l.classList.remove("active"));
+    this.classList.add("active");
+
+    // kasih delay biar scroll selesai dulu
+    setTimeout(() => {
+      isClicking = false;
+    }, 500);
+  });
+});
+
+
+// SCROLL
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  if (window.scrollY < 100) {
+    current = "beranda";
+  } else {
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.dataset.section === current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// DEFAULT
+window.addEventListener("DOMContentLoaded", () => {
+  const firstLink = document.querySelector('nav a[data-section="beranda"]');
+  if (firstLink) firstLink.classList.add("active");
+});

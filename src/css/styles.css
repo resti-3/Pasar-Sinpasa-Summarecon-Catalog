@@ -83,6 +83,32 @@ h3 {
   z-index: 1000;
 }
 
+nav a {
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav a.active {
+  color: var(--green-normal-active);
+  font-weight: 600;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #16a34a;
+  transition: 0.3s;
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
 .nav-search {
   position: relative;
   display: flex;
@@ -410,6 +436,7 @@ h3 {
   max-width: 1100px;
   margin: 80px auto;
   text-align: center;
+  padding-bottom: 16rem;
 }
 
 .testimoni-grid {
