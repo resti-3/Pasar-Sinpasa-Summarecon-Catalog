@@ -1,0 +1,1304 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    flex-wrap: wrap;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    flex-wrap: wrap;
+    
+}
+.login-container{
+    background-color: white;
+    padding:0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    gap:50px;
+    align-items: center;
+    position: relative;
+}
+.login-kiri{
+    margin:0;
+    padding:0;
+    position: relative;
+    width: 40%;
+    flex-wrap: wrap;
+}
+.login-kiri img{
+    width: 110%;
+    height: 99vh;
+    margin: 0;
+    padding: 0;
+}
+.login-kiri .teks{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.login-kiri .teks h1{
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.login-kanan{
+    padding: 90px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative; 
+    margin: 10px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    height: auto;
+}
+.login-kanan form{
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.login-kanan h2{
+    font-size: 2.0rem;
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+.login-kanan .p{
+    margin-bottom: 10px;
+    color: black;
+}
+
+.input-login{
+    margin-bottom: 20px;
+}
+.input-login label{
+    color: rgba(0,0,0,0.7);
+    font-size: 0.8rem;
+    padding-left: 5px;
+}
+.input-login input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #d9d9d9;
+    padding: 5px;
+    border: 2px solid #d9d9d9;
+}
+.ceklis{
+    margin-bottom: 20px;
+}
+.ceklis label{
+    color: rgba(0,0,0,0.7);
+    font-size: 0.9rem;
+    text-align: center;
+    padding-left: 5px;
+}
+.login-kanan form button{
+    text-align: center;
+    justify-content: center;
+}
+.btn-sigin{
+    margin-bottom: 20px;
+   align-items: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #009750;
+    border: 1px solid #009750;
+    color:black;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.btn-sigin:hover{
+    background-color: #59cf98;
+    color:white;
+}
+.footer {
+    color: rgba(0,0,0,0.6);
+    font-size: 0.8rem;
+
+    text-align: center;
+}
+.footer a{
+    color: black;
+    text-decoration: none;
+}
+
+/*Kode Untuk Register */
+.register-kiri img{
+    width: 110%;
+    height: 99vh;
+    margin: 0;
+    padding: 0;
+}
+.register-kiri .teks{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+}
+.register-kiri .teks h1{
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.register-kanan{
+    padding:90px;
+    padding-top:80px;
+    padding-bottom:80px; 
+    position: relative;
+    margin: 10px;
+    flex: 1;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    height: auto;
+}
+
+.resigter-kanan form{
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.register-kanan h2{
+    font-size: 2.0rem;
+    text-align: left;
+    margin-bottom: 3px;
+}
+.register-kanan h6{
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+.input-resigter{
+    margin-bottom: 30px;
+}
+.input-register label{
+    color: rbga(0,0,0,0.7);
+    font-size: 0.7rem;
+    padding-left: 5px;
+}
+.input-register input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #d9d9d9;
+    padding: 5px;
+    border: 2px solid #d9d9d9;  
+    margin-bottom: 5px;
+}
+.input-register .role{
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 4px 8px;
+    gap:20px;
+    border: 1px solid #d9d9d9;
+}
+.input-register .role input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #d9d9d9;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.role .default{
+    font-size: 0.5rem;
+    color: rgba(0,0,0,0.5);
+    background-color: aquamarine;
+    width: 23%;
+    height: 15px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.fiksasi{
+    color: rgba(0,0,0,0.5);
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.register-kanan form button{
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    margin-top: 20px;       
+    gap: 5px;             
+    width: 100%;
+}
+.regis-button{
+    margin-bottom: 0px;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #009750;
+    border: 1px solid #009750;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+}
+.regis-button:hover{
+    background-color: #59cf98;
+    color: white;
+}
+.register-kanan a{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+/* Kode Untuk Dashboard */
+/* Sidebar kiri */
+.Sidebar{
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.navbar{
+    padding: 10px;
+    margin: 0;
+    background-color: #ECFDF5;
+    display: flex;
+    width: 250px;
+    color: #000000;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+.navbar .logo h3{
+    font-size: 24px;
+    color: black;
+    margin-bottom: 2px;
+    padding: 0;
+    text-align: center;
+}
+.navbar .logo h5{
+    font-size: 14px;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 30px;
+    text-align: center;
+}
+.navbar .add{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.add .New{
+    font-size: 12px;
+    color:white;
+    width: 60%;
+    height: 40px;
+    background-color: #00342B;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    border: 1px solid #00342B;
+    border-radius: 3px;
+}
+.New i{
+    padding: 2px;
+}
+.New:hover{
+    background-color: green;
+    color:black;
+}
+.atas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-bottom: 190px;
+}
+.atas li{
+    margin-bottom: 5px;
+    padding: 3px;
+    list-style: none;
+    border-radius: 20px;
+}
+
+.atas a{
+    color:#539682;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+.atas li:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.atas i{
+    padding: 5px;
+    color: black;
+}
+.bawah{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    border-top: 2px solid rgba(0,0,0,0.4);
+}
+.bawah li{
+    margin-bottom: 10px;
+    padding: 3px;
+    list-style: none;
+    border-radius: 20px;
+}
+.bawah a{
+    color:#539682;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+.bawah li:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.bawah i{
+    padding: 5px;
+    color: black;
+}
+.main-container{
+    flex: 1;
+    display:flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+/* Header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ECFDF5;
+    padding: 0px 30px;
+    border-bottom: 1px solid #539682;
+    height:50px
+}
+
+.header-left{
+    display:flex;
+    align-items: center;
+}
+.search-box{
+    display:flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+.search-box input{
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.admin-profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.admin-teks{
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+}
+.admin-profile img{
+    width:38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid  black;
+}
+
+.opening{
+    margin: 0;
+    padding: 20px;
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+}
+.opening .teks{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.teks-kiri{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+
+}
+.teks h1{
+    font-size: 26px;
+    padding-top: 3px;
+    margin-bottom: 0;
+}
+.teks p{
+    font-size: 14px;
+    padding: 3px;
+    margin-bottom: 5px;
+    color: rgba(0,0,0,0.7);
+}
+.teks-kanan{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.teks-kanan .default{
+    font-size: 14px;
+    color: black;
+    background-color: #539682;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #00342B;
+}
+.default a{
+    text-decoration: none;
+    color: black;
+}
+.informasi{
+    flex:1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    gap: 20px;
+}
+.rangkuman{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 2px solid rgba(0,0,0,0.4);
+    box-shadow: #d9d9d9;
+    border-radius: 10px;
+    padding:5px;
+    background-color: white;
+    width: 40%;
+}
+.informasi .kata{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    margin-bottom: 15px;
+}
+.kata i{
+    background-color: #539682;
+    border: 1px solid #539682;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.kata .nominal{
+    font-size: 12px;
+    color: #539682;
+}
+.rangkuman p{
+    font-size: 12px;
+    color: rgba(0,0,0,0.5);
+}
+.rangkuman i{
+    padding-left: 5px;
+}
+.Data{
+    display:flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    
+}
+.Data .bagan{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 10px;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    gap: 70px;
+}
+.bagan .bagan-kiri{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.7);
+
+}
+.teks-bagan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 10px;
+    margin: 0;
+}
+.teks-kiri h6{
+    font-size: 8px;
+    color: rgba(0,0,0,0.4);
+}
+.teks-kanan{
+    padding: 7px;
+    margin:0;
+}
+.bar-wrapper {
+    display: flex;
+    align-items: flex-end; 
+    justify-content: space-around;
+    height: 200px;
+    border-bottom: 2px solid #eee;
+    padding-top: 20px;
+}
+
+.bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+}
+
+.bar {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    transition: transform 0.3s;
+    height: auto;
+    background: #539682;
+}
+
+.bar:hover {
+    transform: scaleY(1.05);
+}
+
+.bar span {
+    position: absolute;
+    top: -25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.5);
+    align-items: center;
+}
+.bar-item p{
+    font-size: 10px;
+}
+.bagian-kanan{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 5px;
+    width: 40%;
+    border: 1px solid rgba(0,0,0,0.4);
+    box-shadow: #d9d9d9;
+}
+.bagian-kanan h5{
+    font-size: 12px;
+    color: black;
+    margin-bottom: 3px;
+}
+.list-update{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin:0;
+    padding: 0;
+}
+.list-update p{
+    font-size: 12px;
+    color: black;
+    width: 100%;
+}
+.list-update i{
+    padding-right:10px;
+    color: green;
+}
+.list-update .tanggal{
+    font-size: 10px;
+    color: rgba(0,0,0,0.5);
+    padding-left:20px;
+    margin-bottom: 5px;
+}
+.view p{
+    font-size: 14px;
+    color: black;
+
+}
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+}
+.footer img{
+    width: 100%;
+    height: 300px;
+    
+}
+.footer-teks{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #00342B;
+}
+.btn-detail{
+    background-color: #00342B;
+    border-radius: 10px;
+    border:1px solid #539682;
+    width: 40%;
+    height: 40px;
+    color: white;
+}
+.footer-teks p{
+    margin-bottom: 10px;
+}
+.btn-detail:hover{
+    background-color: green;
+    color: black;
+}
+/* Kode Setting Market */
+
+ .atas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-bottom: 190px;
+}
+.atas li{
+    margin-bottom: 5px;
+    padding: 3px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    list-style: none;
+    border-radius: 20px;
+}
+
+.atas a{
+    color:#539682;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+.atas li:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.atas i{
+    padding: 5px;
+    color: black;
+}
+.bawah{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    border-top: 2px solid rgba(0,0,0,0.4);
+}
+.bawah li{
+    margin-bottom: 10px;
+    padding: 3px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    list-style: none;
+    border-radius: 20px;
+}
+.bawah a{
+    color:#539682;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+.bawah li:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.bawah i{
+    padding: 5px;
+    color: black;
+}
+.main-container{
+    flex: 1;
+    display:flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ECFDF5;
+    padding: 0px 30px;
+    border-bottom: 1px solid #539682;
+    height:50px
+}
+.header-left{
+    display:flex;
+    align-items: center;
+}
+.search-box{
+    display:flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+.search-box input{
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.admin-profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.admin-teks{
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+}
+.admin-profile img{
+    width:38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid  black;
+}
+.market-setting{
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 15px;
+    background-color: white;
+}
+.market-text{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    height: 70px;
+    padding:3px;
+    margin-bottom: 10px;
+}
+.text-left{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-bottom: 4px;
+    background-color: white;
+    color: black;
+}
+.text-left h3{
+    font-size: 30px;
+    color: black;
+    margin-bottom: 5px;
+    padding: 0;
+}
+.text-left p{
+    font-size: 12px;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 3px;
+    padding:0;
+}
+.text-right{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.btn-market{
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: #00342B;
+    border-radius: 5px;
+    border:1px solid #539682;
+    font-size: 12px;
+}
+.btn-market:hover{
+    color: black;
+    background-color: green;
+}
+.setting-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    margin: 0;
+    background-color: white;
+}
+.setting-list li{
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.setting-list li:hover{
+    background-color: #d9d9d9;
+}
+.setting-list li a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.7);
+    font-size: 12px;
+    padding-left: 20px;  
+}
+.setting-list li a:hover{
+    color: rgba(0,0,0,0.5);
+} 
+/* Kode Setting Market */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Be Vienam Pro', sans-serif;
+    color: black;
+}
+.Form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: black;
+}
+.Global{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    margin: 0;
+    background-color: white;
+    color: black;
+    margin-bottom: 30px;
+}
+.Global h2{
+    font-size: 32px;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+.fa-earth-asia{
+    font-size: 24px;
+    padding-right: 10px;
+    margin: 0;
+    text-align: center;
+}
+.Global .input-data{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+.input-data label{
+    font-size: 12px;
+    color: rgba(0,0,0,0.7);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-bottom: 2px;
+    padding-left: 10px;
+}
+.input-data input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 10px;
+    background-color: #d9d9d9;
+}
+.Global .photo{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    gap: 20px;
+}
+.photo .photo-left{
+    width: 100px;
+    height: 90px;
+    border:2px dashed #d9d9d9;
+    padding-top: 70px;
+    background-color: grey;
+}
+.photo-left p{
+    font-size:12px;
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+}
+.photo .photo-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin: 0;
+}
+.photo-right .title{
+    font-size: 16px;
+    color: rgba(0,0,0,0.5);
+}
+.photo-right .teks{
+    font-size: 10px;
+    color: rgba(0,0,0,0.5);
+}
+.photo-right .list{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+    padding: 2px;
+    margin: 0;
+}
+.btn-list{
+    width: 70px;
+    height: 30px;
+    background-color: grey;
+    padding: 0;
+    margin: 0;
+    border-radius: 2px;
+    border: 1px solid grey;
+    font-size: 8px;
+    color: rgba(0,0,0,0.8);
+}
+.operational{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.operational h2{
+    font-size: 30px;
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-bottom: 5px;
+}
+.fa-gear{
+    font-size: 24px;
+    padding-right: 10px;
+    margin: 0;
+}
+.operational form p{
+    font-size: 14px;
+    color: black;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
+}
+.fa-circle{
+    font-size: 10px;
+    padding-right: 5px;
+}
+.operational .time-operational{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.time-operational .time{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.time .btn-time{
+    text-align: left;
+    border-radius: 5px;
+    padding-left: 20px;
+    width: 295px;
+    height: 70px;
+    border: 1px solid black;
+}
+.btn-time .day{
+    font-size: 12px;
+    color: rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+.btn-time .hour{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.add{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.add .btn-time{
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 20px;
+    width: 295px;
+    height: 70px;
+    border: 1px solid black;   
+}
+.data-input{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.data-left{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+    width: 50%;
+}
+.data-right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;   
+}
+.data-input label{
+    font-size: 12px;
+    padding-left: 10px;
+    color: rgba(0,0,0,0.5);
+}
+.data-input input{
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: #d9d9d9;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+.message label{
+    font-size: 12px;
+    color: rgba(0,0,0,0.5);
+}
+.message textarea{
+    width: 100%;
+    min-height: 120px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.digital{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.digital .dig-met{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.dig-met h2{
+    font-size: 32px;
+    color: black;
+}
+.fa-database{
+    font-size: 20px;
+    padding-right: 10px;
+}
+.dig-met p{
+    font-size: 12px;
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 5px;
+}
+.key{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.key .keyword{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border:1px solid grey;
+    background-color: grey;
+    height: 40px;
+    gap: 40px;
+    padding-left: 50px;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+}
+.keyword p{
+    font-size: 10px;
+}
+.kunci{
+    background-color: white;
+    width: 60px;
+    text-align: center;
+    height: 20px;
+    border-radius: 5px;
+    padding:3px;
+}
+.sosial-media{
+    display:flex;
+    flex-direction: row;
+    gap:40px;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+.sosial-media .sosmed{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.sosmed label{
+    font-size: 12px;
+    color:rgba(0,0,0,0.5);
+    padding-left: 15px;
+}
+.sosmed input{
+    width: auto;
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.verif{
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+    width: 100%;
+    margin:0;
+    padding-left:20px;
+    margin-bottom: 20px;
+}
+.verif .verif-left{
+    width:60px;
+    height: 32px;
+    background-color: grey;
+    border:1px solid grey;
+    border-radius: 15px;
+}
+.verif-left .fa-circle{
+    font-size: 26px;
+    padding: 2px;
+}
+.verif-right p{
+    font-size:12px;
+    color:rgba(0,0,0,0.5);
+    text-align: center;
+    padding-top:8px;
+    padding-bottom: 8px;
+}
+.footer-flex{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.footer-left .btn-save{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border:1px solid grey;
+    color: rgba(0,0,0,0.5);
+}
+.footer-right .btn-save{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border:1px solid green;
+    background-color: #004338;
+    color:white;
+}
+.footer-right .btn-save:hover{
+    background-color: green;
+    color: black;
+}
