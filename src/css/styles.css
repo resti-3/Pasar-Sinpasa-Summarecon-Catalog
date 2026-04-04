@@ -50,9 +50,10 @@
 }
 
 html{
-    height: 100vh;
+  height: 100vh;
 }
 
+/* Body Format */
 body {
   margin: 0;
   background: #f5f5f5;
@@ -61,6 +62,7 @@ body {
   line-height: 1.3em;
 }
 
+/* Heading Format */
 h1 {
   font-family: 'Manrope', sans-serif;
   line-height: 1em;
@@ -74,6 +76,7 @@ h3 {
   font-family: 'Manrope', sans-serif;
 }
 
+/* Navigation Bar */
 .navbar {
   background: #ffffff;
   padding: 16px 0;
@@ -81,7 +84,7 @@ h3 {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -91,9 +94,18 @@ h3 {
 
 .logo {
   max-width: fit-content;
+  padding: 1.5rem;
+}
+
+.hamburger {
+  display: none;
 }
 
 .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: stretch;
+  justify-content: start;
   text-decoration: none;
   color: var(--text-black);
   font-weight: 500;
@@ -107,6 +119,10 @@ h3 {
   color: var(--green-normal-hover);
 }
 
+.menu :active {
+  color: var(--green-normal-active);
+}
+
 .menu a {
   margin: 0 12px;
   text-decoration: none;
@@ -116,8 +132,9 @@ h3 {
 }
 
 .nav-icon {
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
+  padding: 1.5rem;
 }
 
 .hero {
@@ -441,7 +458,19 @@ h3 {
 .social span {
   font-size: 20px;
   margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  padding: 0.5rem;
+  width: 40;
+  height: 40;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+}
+
+.social span:hover {
+    background-color: #e0e0e0;
 }
 
 .footer-bottom {
@@ -449,4 +478,48 @@ h3 {
   font-size: 12px;
   margin-top: 30px;
   color: #888;
+}
+
+/* Tablet size */
+@media screen and (480px < width <= 768px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+/* Mobile Size */
+@media screen and (width <= 480px) {
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-items: end;
+    justify-self: center;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+  
+  .fasilitas-grid{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimoni-grid{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testi-card.big{
+    transform: scale(1);
+  }
+
+  .menu {
+    display: none;
+  }
 }
