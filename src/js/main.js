@@ -3,6 +3,26 @@
 // Fungsi camelCase
 // CONSTANTA gunakan UPPERCASE
 
+const searchToggle = document.getElementById("searchToggle");
+const navSearch = document.querySelector(".nav-search");
+const navInput = document.getElementById("navSearchInput");
+
+// toggle open/close search button di navbar
+searchToggle.addEventListener("click", () => {
+  navSearch.classList.toggle("active");
+  navInput.focus();
+});
+
+navInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    const keyword = navInput.value.trim();
+
+    if (keyword !== "") {
+      window.location.href = `katalog.html?search=${encodeURIComponent(keyword)}`;
+    }
+  }
+});
+
 const searchInput = document.getElementById("searchInput");
 const cards = document.querySelectorAll(".card-katalog");
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -10,9 +30,11 @@ const filterButtons = document.querySelectorAll(".filter-btn");
 let activeFilter = "all";
 
 // SEARCH
-searchInput.addEventListener("input", function () {
-  applyFilter() 
+if (searchInput) {
+  searchInput.addEventListener("input", function () {
+    applyFilter();
   });
+}
 
 // FILTER
 filterButtons.forEach(btn => {
@@ -60,5 +82,13 @@ if (categoryFromURL) {
     }
   });
 
+  applyFilter();
+}
+
+// NGAMBIL DARI SEARCH
+const searchFromURL = urlParams.get("search");
+
+if (searchFromURL) {
+  searchInput.value = searchFromURL.toLowerCase();
   applyFilter();
 }

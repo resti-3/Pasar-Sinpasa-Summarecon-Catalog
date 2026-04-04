@@ -78,6 +78,36 @@ h3 {
   z-index: 1000;
 }
 
+.nav-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-search input {
+  width: 0;
+  opacity: 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #f1f1f1;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+#searchToggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-search.active input {
+  width: 220px;
+  opacity: 1;
+  margin-right: 10px;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -121,6 +151,7 @@ h3 {
 
 .menu :active {
   color: var(--green-normal-active);
+  text-decoration: underline solid;
 }
 
 .menu a {
@@ -129,6 +160,7 @@ h3 {
   color: #40493D;
   font-weight: 500;
   text-align: center;
+  font-size: small;
 }
 
 .nav-icon {
