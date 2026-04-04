@@ -70,6 +70,9 @@ h3 {
   background: #ffffff;
   padding: 1rem 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .container {
@@ -132,7 +135,11 @@ h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.2)
+  );
 }
 
 .hero-content {
@@ -165,6 +172,10 @@ h3 {
   text-decoration: none;
   font-size: small;
   font-family: 'Be Vietnam Pro';
+}
+
+.btn-primary:hover {
+  background: var(--green-normal-hover);
 }
 
 .kategori {
@@ -401,6 +412,7 @@ h3 {
   background: #f0f0f0;
   padding: 60px 0 20px;
   margin-top: 80px;
+  text-transform: uppercase;
 }
 
 .footer-container {
@@ -432,6 +444,7 @@ h3 {
   color: #555;
   margin-bottom: 1rem;
   text-decoration: none;
+  text-transform: none;
 }
 
 .info h4 {
@@ -444,8 +457,10 @@ h3 {
   font-size: 13px;
   color: #555;
   display: block;
+  margin: 0;
   margin-bottom: 8px;
   text-decoration: none;
+  text-align: left;
 }
 
 .social span {
@@ -459,6 +474,7 @@ h3 {
   font-size: 12px;
   margin-top: 30px;
   color: #888;
+  text-transform: none;
 }
 
 /* halaman katalog */
@@ -511,6 +527,13 @@ h3 {
   border: none;
   padding: 0 24px;
   cursor: pointer;
+  border-radius: 6rem;
+  margin: 0.3rem 0.5rem;
+}
+
+.search-bar img {
+  align-items: center;
+  margin-left: 2rem;
 }
 
 .filter {
@@ -651,4 +674,60 @@ h3 {
 
 .info-item:last-child p {
   line-height: 1.6;
+}
+
+.info-page {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 100px;
+}
+
+.info-image {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.info-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.info-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.2)
+  );
+}
+
+.label {
+  font-size: 12px;
+  color: var(--yellow-dark-hover);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.info-content h1 {
+  font-size: 42px;
+  margin: 16px 0 24px;
+  line-height: 1.2;
+}
+
+.article {
+  max-width: 100%;
+}
+
+.article p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
 }
