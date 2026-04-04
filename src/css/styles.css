@@ -490,6 +490,7 @@ nav a.active::after {
 }
 
 .footer {
+  position: fixed;
   background: #f0f0f0;
   padding: 60px 0 20px;
   margin-top: 80px;
