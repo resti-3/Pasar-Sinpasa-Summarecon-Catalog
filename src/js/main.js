@@ -43,3 +43,22 @@ function applyFilter() {
     }
   });
 }
+
+// NGAMBIL PILIHAN CARDS KATALOG
+const urlParams = new URLSearchParams(window.location.search);
+const categoryFromURL = urlParams.get("category");
+
+// AKTIFIN FILTER DARI PILIHAN
+if (categoryFromURL) {
+  activeFilter = categoryFromURL;
+
+  filterButtons.forEach(btn => {
+    if (btn.dataset.filter === categoryFromURL) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+
+  applyFilter();
+}
