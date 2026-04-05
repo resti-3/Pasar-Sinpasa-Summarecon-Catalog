@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+        <link rel="icon" type="image/x-icon" href="../../img/sinpasa-normal-svg.svg">
+        <title>Pasar Modern Sinpasa</title>
+</head>
+
+<body>
+    <div id="placeholder-header"></div>
+    
+    <main>
+        <section class="katalog-header">
+            <span class="label">Eksplorasi Pasar</span>
+            <h1>Katalog <span>Tenant</span> Pasar</h1>
+            <p>Temukan produk terbaik dari UMKM lokal di Pasar Sinpasa Summarecon Bandung.</p>
+            
+            <div class="search-bar">
+        <img src="../../img/search.svg">
+        <input type="text" id="searchInput" placeholder="Cari kategori atau toko..." />
+        <button>Cari</button>
+    </div>
+    </section>
+
+    <div class="filter">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="sayur">Sayur dan Buah</button>
+        <button class="filter-btn" data-filter="daging">Daging</button>
+        <button class="filter-btn" data-filter="olahan">Olahan dan Jajanan</button>
+        <button class="filter-btn" data-filter="kuliner">Kuliner</button>
+        <button class="filter-btn" data-filter="nonhalal">Non-Halal</button>
+        <button class="filter-btn" data-filter="kios-besar">Kios Besar</button>
+        <button class="filter-btn" data-filter="kios-kecil">Kios Kecil</button>
+    </div>
+
+    <section class="katalog-list">
+        <a href="toko-gyoza.html" class="card-katalog" data-category="kuliner">
+            <div class="card-image">
+                <img src="../../img/gyozanatic.jpeg" alt="gyoza">
+                <span class="badge">Kuliner</span>
+            </div>
+            
+            <div class="card-body">
+                <span class="kode">L006</span>
+                <h3>Gyozanatic</h3>
+                <p>Rasakan gyoza khas Jepang.</p>
+            </div>
+        </a>
+
+        <a href="toko-bandeng-duri.html" class="card-katalog" data-category="kuliner">
+            <div class="card-image">
+                <img src="../../img/bandeng_cabut_duri.jpeg" alt="bandeng">
+                <span class="badge">Kuliner</span>
+            </div>
+            
+            <div class="card-body">
+                <span class="kode">L007</span>
+                <h3>Bandeng Cabut Duri</h3>
+                <p>Sensasi makan ikan lebih nikmat.</p>
+            </div>
+        </a>
+        
+        <a href="toko-segar-abadi.html" class="card-katalog" data-category="sayur">
+            <div class="card-image">
+                <img src="../../img/sayuran.png" alt="sayuran">
+                <span class="badge">Sayur dan Buah</span>
+            </div>
+            
+            <div class="card-body">
+                <span class="kode">L055</span>
+                <h3>Toko Segar Abadi</h3>
+                <p>Sayuran Hidroponik & Organik segar setiap hari langsung dari petani lokal.</p>
+            </div>
+        </a>
+        
+    </section>
+    
+</main>
+
+    <!-- Footer -->
+    <div id="placeholder-footer">Ini footer</div>
+
+    <!-- Js -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/loader.js"></script>
+</body>
+</html>
