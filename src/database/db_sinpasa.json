@@ -1,0 +1,570 @@
+{
+  "roles": [
+    {
+      "role_id": 1,
+      "role_name": "Market Administrator"
+    }
+  ],
+  "users": [
+    {
+      "user_id": 1,
+      "name": "admin1234",
+      "email": "admin@market.com",
+      "password": "hashed_password",
+      "role_id": 1,
+      "created_at": "2026-04-01T08:00:00Z"
+    }
+  ],
+  "markets": [
+    {
+      "market_id": 1,
+      "name": "Pasar Modern Sinpasa Summarecon Bandung",
+      "description": "Pasar modern di wilayah mall Summarecon Bandung dengan berbagai tenant dan fasilitas lengkap",
+      "address": "Bandung",
+      "created_at": "2026-04-01T08:00:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "category_id": "kios-besar",
+      "category_name": "Kios Besar"
+    },
+    {
+      "category_id": "kios-kecil",
+      "category_name": "Kios Kecil"
+    },
+    {
+      "category_id": "kios-fnb",
+      "category_name": "Kios F&B/Kuliner"
+    },
+    {
+      "category_id": "lapak-sayur-buah-dan-jajanan",
+      "category_name": "Lapak Sayur, Buah, dan Jajanan"
+    },
+    {
+      "category_id": "lapak-olahan-dan-jajanan",
+      "category_name": "Lapak Olahan dan Jajanan"
+    },
+    {
+      "category_id": "lapak-non-halal",
+      "category_name": "Lapak Non-Halal"
+    },
+    {
+      "category_id": "lapak-basah",
+      "category_name": "Lapak Basah"
+    },
+    {
+      "category_id": "lapak-kuliner",
+      "category_name": "Lapak Kuliner"
+    },
+    {
+      "category_id": "atm",
+      "category_name": "ATM Center"
+    },
+    {
+      "category_id": "mushola",
+      "category_name": "Mushola"
+    },
+    {
+      "category_id": "area-pengelola",
+      "category_name": "Area Pengelola"
+    },
+    {
+      "category_id": "toilet",
+      "category_name": "Toilet"
+    }
+  ],
+  "tenant": [
+    {
+        "tenant_id":"KB001",
+        "name":"Toko Sembako Makmur",
+        "details":"Kebutuhan pokok lengkap dan terjangkau",
+        "category_id":"kios-besar",
+        "status":"Active",
+        "join_date":"2026-01-05"
+    },
+    {
+        "tenant_id": "KB002",
+        "name": "Toko Elektronik Nusantara",
+        "details": "Elektronik rumah tangga berkualitas",
+        "category_id": "kios-besar",
+        "status": "Active",
+        "join_date": "2026-01-07"
+    },
+    {
+        "tenant_id": "KB003",
+        "name": "Toko Fashion Modern",
+        "details": "Pakaian pria dan wanita terbaru",
+        "category_id": "kios-besar",
+        "status": "Active",
+        "join_date": "2026-01-09"
+    },
+    {
+        "tenant_id": "KB005",
+        "name": "Toko Perabot Rumah",
+        "details": "Peralatan rumah tangga lengkap",
+        "category_id": "kios-besar",
+        "status": "Active",
+        "join_date": "2026-01-11"
+    },
+    {
+        "tenant_id": "KB006",
+        "name": "Toko Serba Ada Jaya",
+        "details": "Berbagai kebutuhan harian tersedia",
+        "category_id": "kios-besar",
+        "status": "Active",
+        "join_date": "2026-01-13"
+    },
+    {
+        "tenant_id": "KK007",
+        "name": "Kios Aksesoris Trendy",
+        "details": "Aksesoris fashion kekinian",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-01"
+    },
+    {
+        "tenant_id": "KK008",
+        "name": "Kios Pulsa Digital",
+        "details": "Isi ulang pulsa dan paket data",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-02"
+    },
+    {
+        "tenant_id": "KK009",
+        "name": "Kios Fotocopy Cepat",
+        "details": "Print dan fotocopy cepat",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-03"
+    },
+    {
+        "tenant_id": "KK010",
+        "name": "Kios Minuman Segar",
+        "details": "Minuman dingin dan jus segar",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-04"
+    },
+    {
+        "tenant_id": "KK011",
+        "name": "Kios Snack Ringan",
+        "details": "Cemilan ringan dan jajanan",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-05"
+    },
+    {
+        "tenant_id": "KK012",
+        "name": "Kios ATK Murah",
+        "details": "Alat tulis kantor lengkap",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-06"
+    },
+    {
+        "tenant_id": "KK015",
+        "name": "Kios Mainan Anak",
+        "details": "Mainan edukatif dan hiburan",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-07"
+    },
+    {
+        "tenant_id": "KK016",
+        "name": "Kios Laundry Express",
+        "details": "Layanan cuci cepat dan rapi",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-08"
+    },
+    {
+        "tenant_id": "KK017",
+        "name": "Kios Jahit Kilat",
+        "details": "Jasa jahit dan permak pakaian",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-09"
+    },
+    {
+        "tenant_id": "KK018",
+        "name": "Kios Vape & Rokok",
+        "details": "Produk rokok dan aksesoris",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-10"
+    },
+    {
+        "tenant_id": "KK019",
+        "name": "Kios Herbal Sehat",
+        "details": "Obat herbal dan kesehatan",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-11"
+    },
+    {
+        "tenant_id": "KK020",
+        "name": "Kios Gadget Acc",
+        "details": "Aksesoris HP dan gadget",
+        "category_id": "kios-kecil",
+        "status": "Active",
+        "join_date": "2026-02-12"
+    },
+    {
+        "tenant_id": "KK033",
+        "name": "Warung Nasi Padang Sederhana",
+        "details": "Masakan padang autentik",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-01"
+    },
+    {
+        "tenant_id": "KK032",
+        "name": "Kedai Kopi Nusantara",
+        "details": "Kopi lokal dan tempat santai",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-02"
+    },
+    {
+        "tenant_id": "KK031",
+        "name": "Ayam Geprek Juara",
+        "details": "Ayam geprek pedas mantap",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-03"
+    },
+    {
+        "tenant_id": "KK030",
+        "name": "Bakso Pak Kumis",
+        "details": "Bakso kenyal kuah gurih",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-04"
+    },
+    {
+        "tenant_id": "KK029",
+        "name": "Mie Ayam Lezat",
+        "details": "Mie ayam dengan topping melimpah",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-05"
+    },
+    {
+        "tenant_id": "KK028",
+        "name": "Soto Nusantara",
+        "details": "Aneka soto khas Indonesia",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-06"
+    },
+    {
+        "tenant_id": "KK027",
+        "name": "Nasi Goreng Mantap",
+        "details": "Nasi goreng spesial berbagai varian",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-07"
+    },
+    {
+        "tenant_id": "KK026",
+        "name": "Es Teh & Jus Segar",
+        "details": "Minuman segar pelepas dahaga",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-08"
+    },
+    {
+        "tenant_id": "KK025",
+        "name": "Martabak Manis Legit",
+        "details": "Martabak topping lengkap",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-09"
+    },
+    {
+        "tenant_id": "KK023",
+        "name": "Roti Bakar Spesial",
+        "details": "Roti bakar berbagai rasa",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-10"
+    },
+    {
+        "tenant_id": "KK022",
+        "name": "Kebab Turki Mini",
+        "details": "Kebab lezat harga terjangkau",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-11"
+    },
+    {
+        "tenant_id": "KK021",
+        "name": "Dimsum Express",
+        "details": "Dimsum hangat siap saji",
+        "category_id": "kios-fnb",
+        "status": "Active",
+        "join_date": "2026-03-12"
+    },
+    {
+        "tenant_id": "L090",
+        "name": "Lapak Buah Segar",
+        "details": "Buah segar langsung dari petani",
+        "category_id": "lapak-sayur-buah-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-01-20"
+    },
+    {
+        "tenant_id": "L089",
+        "name": "Lapak Sayur Organik",
+        "details": "Sayuran sehat dan segar",
+        "category_id": "lapak-sayur-buah-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-01-21"
+    },
+    {
+        "tenant_id": "L088",
+        "name": "Lapak Buah Lokal",
+        "details": "Buah lokal berkualitas",
+        "category_id": "lapak-sayur-buah-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-01-22"
+    },
+    {
+        "tenant_id": "L087",
+        "name": "Lapak Jajanan Pasar",
+        "details": "Jajanan tradisional harian",
+        "category_id": "lapak-sayur-buah-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-01-23"
+    },
+    {
+        "tenant_id": "L086",
+        "name": "Lapak Sayur Segar",
+        "details": "Sayuran segar tiap pagi",
+        "category_id": "lapak-sayur-buah-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-01-24"
+    },
+    {
+        "tenant_id": "L085",
+        "name": "Lapak Buah Import",
+        "details": "Buah import berkualitas",
+        "category_id": "lapak-sayur-buah-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-01-25"
+    },
+    {
+        "tenant_id": "L083",
+        "name": "Lapak Snack Tradisional",
+        "details": "Jajanan khas daerah",
+        "category_id": "lapak-sayur-buah-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-01-26"
+    },
+    {
+        "tenant_id": "L082",
+        "name": "Lapak Buah Musiman",
+        "details": "Buah sesuai musim",
+        "category_id": "lapak-sayur-buah-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-01-27"
+    },
+    {
+        "tenant_id": "L016",
+        "name": "Lapak Ikan Laut",
+        "details": "Ikan segar langsung nelayan",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-25"
+    },
+    {
+        "tenant_id": "L017",
+        "name": "Lapak Daging Sapi",
+        "details": "Daging sapi segar",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-26"
+    },
+    {
+        "tenant_id": "L018",
+        "name": "Lapak Ayam Potong",
+        "details": "Ayam segar berkualitas",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-27"
+    },
+    {
+        "tenant_id": "L019",
+        "name": "Lapak Ikan Air Tawar",
+        "details": "Lele, nila, gurame segar",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-28"
+    },
+    {
+        "tenant_id": "L020",
+        "name": "Lapak Udang Segar",
+        "details": "Udang segar pilihan",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-29"
+    },
+    {
+        "tenant_id": "L021",
+        "name": "Lapak Daging Ayam",
+        "details": "Ayam potong harian",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-30"
+    },
+    {
+        "tenant_id": "L022",
+        "name": "Lapak Seafood",
+        "details": "Aneka hasil laut segar",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-31"
+    },
+    {
+        "tenant_id": "L023",
+        "name": "Lapak Ikan Asin",
+        "details": "Ikan asin dan olahan",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-15"
+    },
+    {
+        "tenant_id": "L025",
+        "name": "Lapak Daging Kambing",
+        "details": "Daging kambing segar",
+        "category_id": "lapak-basah",
+        "status": "Active",
+        "join_date": "2026-01-16"
+    },
+    {
+        "tenant_id": "L081",
+        "name": "Lapak Snack Tradisional",
+        "details": "Jajanan khas nusantara",
+        "category_id": "lapak-olahan-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-02-15"
+    },
+    {
+        "tenant_id": "L080",
+        "name": "Lapak Kue Basah",
+        "details": "Kue fresh setiap hari",
+        "category_id": "lapak-olahan-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-02-16"
+    },
+    {
+        "tenant_id": "L079",
+        "name": "Lapak Keripik Gurih",
+        "details": "Keripik aneka rasa",
+        "category_id": "lapak-olahan-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-02-17"
+    },
+    {
+        "tenant_id": "L078",
+        "name": "Lapak Olahan Singkong",
+        "details": "Produk olahan singkong",
+        "category_id": "lapak-olahan-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-02-18"
+    },
+    {
+        "tenant_id": "L077",
+        "name": "Lapak Kacang Sangrai",
+        "details": "Kacang gurih dan renyah",
+        "category_id": "lapak-olahan-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-02-19"
+    },
+    {
+        "tenant_id": "L076",
+        "name": "Lapak Kue Kering",
+        "details": "Kue kering berbagai varian",
+        "category_id": "lapak-olahan-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-02-20"
+    },
+    {
+        "tenant_id": "L075",
+        "name": "Lapak Donat Manis",
+        "details": "Donat lembut dan topping menarik",
+        "category_id": "lapak-olahan-dan-jajanan",
+        "status": "Active",
+        "join_date": "2026-02-21"
+    },
+    {
+        "tenant_id": "L109",
+        "name": "Lapak Daging Non Halal",
+        "details": "Produk non-halal berkualitas",
+        "category_id": "lapak-non-halal",
+        "status": "Active",
+        "join_date": "2026-02-22"
+    },
+    {
+        "tenant_id": "L108",
+        "name": "Lapak Olahan Non Halal",
+        "details": "Makanan olahan non-halal",
+        "category_id": "lapak-non-halal",
+        "status": "Active",
+        "join_date": "2026-02-23"
+    }
+],
+  "operational_hours": [
+    {
+      "operational_id": 1,
+      "tenant_id": "KK006",
+      "open_time": "08:00",
+      "close_time": "22:00",
+      "day_type": "weekday"
+    }
+  ],
+  "market_metadata": [
+    {
+      "metadata_id": 1,
+      "market_id": 1,
+      "key": "theme",
+      "value": "modern"
+    }
+  ],
+  "activity_logs": [
+    {
+      "activity_id": 1,
+      "user_id": 1,
+      "activity_type": "CREATE_TENANT",
+      "description": "Menambahkan tenant baru",
+      "created_at": "2026-04-02T10:00:00Z"
+    }
+  ],
+  "tenant_activities": [
+    {
+      "tenant_activity_id": 1,
+      "tenant_id": 1,
+      "activity_type": "PROMOTION_EXPIRED",
+      "date": "2026-04-03"
+    }
+  ],
+  "promotions": [
+    {
+      "promotion_id": 1,
+      "tenant_id": 1,
+      "title": "Diskon 20%",
+      "start_date": "2026-04-01",
+      "end_date": "2026-04-10"
+    }
+  ],
+  "statistics": [
+    {
+      "stat_id": 1,
+      "market_id": 1,
+      "date": "2026-04-01",
+      "visitors_count": 68900
+    }
+  ]
+}

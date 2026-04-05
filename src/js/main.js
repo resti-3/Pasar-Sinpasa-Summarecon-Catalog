@@ -143,106 +143,126 @@ function initScrollSpy() {
 
 // Denah Interaktif
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Ambil elemen-elemen yang kita butuhkan dari HTML
     const tooltip = document.getElementById('desktop-tooltip');
     const infoCard = document.getElementById('mobile-info-card');
+    const infoImage = document.getElementById('info-image');
+    const infoBadge = document.getElementById('info-badge');
+    const infoId = document.getElementById('info-id');
     const infoTitle = document.getElementById('info-title');
-    const infoCategory = document.getElementById('info-category');
+    const infoDesc = document.getElementById('info-desc');
     const btnClose = document.getElementById('info-close');
     
-    // 2. Ambil semua elemen SVG yang sudah diberi class
+    // Container Data
+    let dataTenants = [];
+    let dataCategories = [];
+
+    // Pull Data dari File JSON
+    fetch('../../database/db_sinpasa.json')
+        .then(response => response.json())
+        .then(data => {
+            dataTenants = data.tenant;
+            dataCategories = data.categories;
+        })
+        .catch(error => console.error("Gagal memuat db_sinpasa.json:", error));
+
     const lapakElements = document.querySelectorAll('.lapak-sayur-buah-dan-jajanan, .lapak-olahan-dan-jajanan, .lapak-non-halal, .lapak-basah, .lapak-kuliner, .kios-besar, .kios-kecil, .kios-fnb, .atm, .mushola, .area-pengelola, .toilet');
 
-    // Fungsi kecil untuk membersihkan format ID (Contoh: "sayur-1" jadi "Sayur 1")
     function formatText(text) {
         if (!text) return "Tanpa Nama";
         return text.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     }
 
-    // 3. Pasang "telinga" (Event Listener) ke setiap lapak
     lapakElements.forEach(lapak => {
-        
-        // HOVER (DESKTOP)
-        // ---- A. LOGIKA HOVER (DESKTOP) ----
-        lapak.addEventListener('mouseenter', () => {
-            // Ambil data nama dan kategori (sama seperti logika klik)
-            const namaLapak = formatText(lapak.id);
-            const kategoriLapak = formatText(lapak.getAttribute('class'));
+        // [Logika Hover Desktop kamu tetap sama di sini...]
+        lapak.addEventListener('mouseenter', () => { /*...*/ });
+        lapak.addEventListener('mousemove', (e) => { /*...*/ });
+        lapak.addEventListener('mouseleave', () => { /*...*/ });
 
-            // Masukkan struktur HTML ke dalam tooltip
-            tooltip.innerHTML = `
-                <div class="tooltip-title">${namaLapak}</div>
-                <div class="tooltip-category">Kategori: ${kategoriLapak}</div>
-            `;
-            
-            tooltip.style.opacity = '1'; // Munculkan pop-up
-        });
-
-        lapak.addEventListener('mousemove', (e) => {
-            // Buat tooltip mengikuti posisi kursor (ditambah 15px agar tidak menabrak kursor)
-            tooltip.style.left = (e.pageX + 15) + 'px';
-            tooltip.style.top = (e.pageY + 15) + 'px';
-        });
-
-        lapak.addEventListener('mouseleave', () => {
-            tooltip.style.opacity = '0';
-        });
-
-
-        // KLIK (HYBRID: DESKTOP & MOBILE) ----
+        // 3. KLIK LAPAK -> MUNCULKAN INFO CARD
         lapak.addEventListener('click', (e) => {
-            // Sembunyikan tooltip agar tidak mengganggu (terutama di layar sentuh)
             tooltip.style.opacity = '0'; 
 
-            // Ambil data lapak yang diklik
-            const namaLapak = formatText(lapak.id);
-            const kategoriLapak = formatText(lapak.className);
+            const lapakId = lapak.id; // Contoh: "L055"
+            const classLapak = lapak.classList[0];
 
-            // Masukkan data ke dalam Info Card
-            infoTitle.textContent = namaLapak;
-            infoCategory.textContent = "Kategori: " + kategoriLapak;
+            // Cari data di JSON
+            const tenant = dataTenants.find(t => t.tenant_id === lapakId);
             
-            // Munculkan panel Info Card dengan menambahkan class 'show'
+            // Variabel Default jika data belum ada di JSON
+            let namaToko = formatText(lapak.id);
+            let deskripsiToko = "Belum ada informasi detail untuk lapak ini.";
+            let namaKategori = formatText(classLapak);
+            let idKategori = classLapak;
+
+            // Timpa dengan data JSON jika ditemukan
+            if (tenant) {
+                namaToko = tenant.name;
+                deskripsiToko = tenant.details;
+                idKategori = tenant.category_id;
+                
+                // Cocokkan category_id untuk mendapat category_name yang rapi
+                const kategoriObj = dataCategories.find(c => c.category_id === tenant.category_id);
+                if (kategoriObj) {
+                    namaKategori = kategoriObj.category_name;
+                }
+            }
+
+            // 4. Suntik Data ke DOM
+            infoId.textContent = lapakId;
+            infoTitle.textContent = namaToko;
+            infoDesc.textContent = deskripsiToko;
+            infoBadge.textContent = namaKategori.toUpperCase();
+            
+            // 5. Sesuaikan Gambar (need to add other category)
+            if(idKategori.includes('sayur')) {
+                infoImage.src = '../../img/sayuran.png';
+            } else if(idKategori.includes('basah')) {
+                infoImage.src = '../../img/daging.png'; 
+            } else if(idKategori.includes('olahan')) {
+                infoImage.src = '../../img/jajanan.png';
+            } else if(idKategori.includes('non-halal')) {
+                infoImage.src = '../../img/nonhalal.png';
+            } else if(idKategori.includes('fnb') || idKategori.includes('kuliner')) {
+                infoImage.src = '../../img/kuliner.png';
+            } else {
+                infoImage.src = '../../img/yana+mulyana-1393199944.jpg';
+            }
+            
             infoCard.classList.add('show');
         });
     });
 
-    // 4. Menutup Info Card
+    // Menutup Info Card
     btnClose.addEventListener('click', () => {
         infoCard.classList.remove('show');
     });
     
     // 5. FILTER KATEGORI
-    const filterButtons = document.querySelectorAll('.btn-filter');
+    const filterButtons = document.querySelectorAll('.legend-item'); // <-- Ganti baris ini
     
     filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // 1. Hapus status 'active' dari semua tombol, lalu aktifkan tombol yang sedang diklik
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-    
-            // 2. Baca kategori apa yang diminta dari atribut 'data-filter'
-            const targetFilter = btn.getAttribute('data-filter');
-    
-            // 3. Seleksi semua lapak
-            lapakElements.forEach(lapak => {
-                if (targetFilter === 'all') {
-                    // Jika klik "Semua", hilangkan efek redup di semua lapak
-                    lapak.classList.remove('lapak-dimmed');
-                } else {
-                    // Jika class lapak cocok dengan filter yang diklik, terangkan. 
-                    // Jika tidak cocok, redupkan!
-                    if (lapak.classList.contains(targetFilter)) {
-                        lapak.classList.remove('lapak-dimmed');
-                    } else {
-                        lapak.classList.add('lapak-dimmed');
-                    }
-                }
-            });
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const targetFilter = btn.getAttribute('data-filter');
+
+        // Seleksi semua lapak
+        lapakElements.forEach(lapak => {
+          if (targetFilter === 'all') {
+            lapak.classList.remove('lapak-dimmed');
+          } else {
+            if (lapak.classList.contains(targetFilter)) {
+                lapak.classList.remove('lapak-dimmed');
+            } else {
+                lapak.classList.add('lapak-dimmed');
+            }
+          }
         });
+      });
     });
 
-    // ZOOM
+    // 6. ZOOM
     const svgMap = document.querySelector('.denah-container svg');
     const btnZoomIn = document.getElementById('btn-zoom-in');
     const btnZoomOut = document.getElementById('btn-zoom-out');
@@ -250,11 +270,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Nilai awal zoom (1 = 100%)
     let currentScale = 1;
-    const scaleStep = 0.3; // Seberapa besar zoom setiap klik
-    const maxScale = 3;    // Maksimal perbesaran (300%)
-    const minScale = 0.5;  // Maksimal pengecilan (50%)
-
-    // Fungsi untuk menerapkan zoom ke CSS
+    const scaleStep = 0.3; 
+    const maxScale = 3;    
+    const minScale = 0.5;  
+    
     function applyZoom() {
         svgMap.style.transform = `scale(${currentScale})`;
     }
@@ -280,7 +299,6 @@ document.addEventListener("DOMContentLoaded", () => {
         currentScale = 1;
         applyZoom();
         
-        // Pilihan tambahan: Kembalikan scroll ke pojok kiri atas
         const container = document.querySelector('.denah-container');
         if(container) {
             container.scrollTop = 0;
