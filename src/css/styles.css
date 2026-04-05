@@ -1416,3 +1416,10 @@ nav a.active::after {
 }
 
 }
+
+@media (max-width: 768px) {
+    body {
+        background: red;
+    }
+}
+
