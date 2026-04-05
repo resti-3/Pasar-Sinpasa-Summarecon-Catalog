@@ -982,6 +982,7 @@ nav a.active::after {
   bottom: -150%; 
   left: 0;
   width: 100%;
+  max-width: 500px;
   background-color: #ffffff;
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
@@ -996,6 +997,7 @@ nav a.active::after {
 
 .info-card.show {
   bottom: 0;
+  
 }
 
 .close-btn {
