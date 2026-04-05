@@ -1530,7 +1530,7 @@ body{
     }
 
     .login-kiri, .register-kiri {
-        display: none; 
+        width: 100%;
     }
 
     .login-kanan, .register-kanan {
@@ -1538,6 +1538,8 @@ body{
         padding: 40px 20px;
         margin: 0;
         flex: none;
+        align-items: center;
+        
     }
 
     .login-kanan h2, .register-kanan h2 {
@@ -1613,8 +1615,6 @@ body{
     .data-input {
         flex-direction: column;
         gap: 10px;
-=======
->>>>>>> 88124588525f7ac856fa961a8459d1c373a911c0
     }
 
     .data-left, .data-right {
