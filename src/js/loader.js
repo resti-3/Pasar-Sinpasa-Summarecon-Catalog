@@ -14,20 +14,17 @@ function loadComponent(elementId, filePath) {
 
 // Fungsi untuk menandai menu yang sedang aktif
 function setActiveMenu() {
-    // Ambil nama file dari URL (misal: "katalog.html" atau "index.html")
     let currentPage = window.location.pathname.split("/").pop();
     
-    // Jika path kosong (hanya "/"), asumsikan itu adalah index.html
-    if (currentPage === "") currentPage = "index.html";
+    // Jika di Beranda, biarkan ScrollSpy yang mengambil alih urusan class .active
+    if (currentPage === "index.html" || currentPage === "") {
+        return; // Hentikan fungsi loader di sini
+    }
 
-    // Cari semua elemen <a> di dalam navbar kamu
+    // Jika di halaman lain (Katalog/Denah), beri penanda aktif
     const navLinks = document.querySelectorAll(".menu a");
-
     navLinks.forEach(link => {
-        // Ambil atribut href dari masing-masing link
-        const linkHref = link.getAttribute("href");
-
-        // Jika cocok, tambahkan class active
+        const linkHref = link.getAttribute("href").split("/").pop();
         if (linkHref === currentPage) {
             link.classList.add("active");
         }
