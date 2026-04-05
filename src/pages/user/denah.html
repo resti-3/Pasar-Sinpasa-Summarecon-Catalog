@@ -5,11 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../../css/styles.css">
         <link rel="icon" type="image/x-icon" href="../../img/sinpasa-normal-svg.svg">
-        <title>Judul Disini</title>
+        <title>Denah Pasar Sinpasa</title>
     </head>
     <body>
-        <!-- Header -->
-        <div id="placeholder-header">Ini footer</div>
+        <header class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-small">
+                        <img src="../../img/LOGO_PASAR.svg"  id="logo">
+                    </span>
+                </div>
+
+                <nav class="menu">
+                    <a href="index.html">Beranda</a>
+                    <a href="katalog.html">KATALOG</a>
+                    <a href="index.html#fasilitas">Fasilitas</a>
+                    <a href="denah.html">Denah</a>
+                    <a href="index.html#testimoni">Testimoni</a>
+                    <a href="index.html#footer">TENTANG KAMI</a>
+                </nav>
+
+                <div class="nav-icon">
+                    <div class="nav-search">
+                        <input type="text" id="navSearchInput" placeholder="Cari kategori atau toko..." />
+                        <button id="searchToggle">
+                            <div class="icons">
+                                <img src="../../img/search.svg">
+                            </div>
+                        </button>
+                    </div>
+                    
+                    <div class="hamburger" id="hamburger">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <line x1="3" y1="6" x2="21" y2="6" stroke="black" stroke-width="2"/>
+                            <line x1="3" y1="12" x2="21" y2="12" stroke="black" stroke-width="2"/>
+                            <line x1="3" y1="18" x2="21" y2="18" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
         
         <main>
             <section class="denah">
@@ -43,13 +79,6 @@
                         <rect x="118.652" y="89.8657" width="1181.03" height="751.987" fill="#D9D9D9" stroke="black"></rect>
                         <path d="M1825.51 145.973V841.854H1300.68V145.973H1825.51Z" fill="#ABA08E" stroke="black"></path>
                         <rect x="119.864" y="522.235" width="5.34229" height="140.761" fill="#D9D9D9" stroke="black"></rect>
-                        
-                        <!-- Kios Besar -->
-                        <rect id="KB001" class="kios-besar" x="118.721" y="89.562" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
-                        <rect id="KB002" class="kios-besar" x="118.721" y="173.042" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
-                        <rect id="KB003" class="kios-besar" x="118.721" y="256.522" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
-                        <rect id="KB004" class="kios-besar" x="118.721" y="340.002" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
-                        <rect id="KB005" class="kios-besar" x="118.721" y="423.482" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
                         <rect x="1300.68" y="145.973" width="768.922" height="695.88" fill="#D9D9D9" stroke="black"></rect>
                         <rect x="3.72119" y="3.56201" width="66" height="65" fill="#323232"></rect>
                         <rect x="3.72119" y="3.56201" width="66" height="65" fill="url(#pattern0_126_644)"></rect>
@@ -69,6 +98,13 @@
                         <rect x="117.721" y="3.56201" width="1090" height="65" fill="#323232"></rect>
                         <rect x="117.721" y="3.56201" width="1090" height="65" fill="url(#pattern5_126_644)"></rect>
                         <rect x="117.721" y="3.56201" width="1090" height="65" stroke="black"></rect>
+                        
+                        <!-- Kios Besar -->
+                        <rect id="KB001" class="kios-besar" x="118.721" y="89.562" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
+                        <rect id="KB002" class="kios-besar" x="118.721" y="173.042" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
+                        <rect id="KB003" class="kios-besar" x="118.721" y="256.522" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
+                        <rect id="KB004" class="kios-besar" x="118.721" y="340.002" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
+                        <rect id="KB005" class="kios-besar" x="118.721" y="423.482" width="114.85" height="82.48" fill="#4B7AA8" stroke="black"></rect>
                         
                         <!-- Kios Kecil -->
                         <g id="KK007" class="kios-kecil">
@@ -264,6 +300,13 @@
                         <rect id="L109" class="lapak-non-halal" x="1151.72" y="89.562" width="55" height="48" fill="#C36D8A" stroke="black"></rect>
                         <rect id="L108" class="lapak-non-halal" x="1151.72" y="138.562" width="55" height="47" fill="#C36D8A" stroke="black"></rect>
 
+                        <!-- Fasilitas Lain -->
+                        <rect id="atm" class="atm" x="1301.22" y="743.062" width="210" height="98" fill="#827E8E" stroke="black" stroke-width="2"></rect>
+                        <rect id="mushola" class="mushola" x="1826.72" y="463.562" width="243" height="210" fill="#8E9176" stroke="black"></rect>
+                        <rect id="gudang" class="area-pengelola" x="1826.72" y="278.562" width="243.209" height="186.379" fill="#D9D9D9" stroke="black"></rect>
+                        <rect id="kamar-pengelola" class="area-pengelola" x="1826.72" y="145.562" width="243" height="133" fill="#D9D9D9" stroke="black"></rect>
+                        <rect id="toilet" class="toilet" x="1826.72" y="671.562" width="243" height="170" fill="#A78A85" stroke="black"></rect>
+
                         <!-- Meja Pengunjung -->
                         <g class="meja-pengunjung">
                             <rect x="1311.97" y="880.914" width="23.9177" height="52.6421" fill="#D9D9D9" stroke="black"></rect>
@@ -408,7 +451,7 @@
                         <circle cx="1173.96" cy="921.569" r="6.12659" fill="#D9D9D9" stroke="black"></circle>
                         <circle cx="1137.78" cy="921.569" r="6.12659" fill="#D9D9D9" stroke="black"></circle>
                         
-                        <!-- IDK -->
+                        <!-- Hard to track -->
                         <rect x="1332.63" y="272.983" width="68.7276" height="74.1268" stroke="#404040"></rect>
                         <rect x="1332.63" y="561.11" width="68.7276" height="74.1268" stroke="#404040"></rect>
                         <rect x="1389.81" y="379.571" width="68.7276" height="74.1268" stroke="black"></rect>
@@ -434,11 +477,6 @@
                         <rect x="1469.18" y="146.562" width="68.7276" height="68.7276" stroke="black"></rect>
                         <rect x="1538.9" y="146.562" width="68.7276" height="68.7276" stroke="black"></rect>
                         <rect x="1608.63" y="146.562" width="68.7276" height="68.7276" stroke="black"></rect>
-                        <rect id="atm" class="atm" x="1301.22" y="743.062" width="210" height="98" fill="#827E8E" stroke="black" stroke-width="2"></rect>
-                        <rect id="mushola" class="mushola" x="1826.72" y="463.562" width="243" height="210" fill="#8E9176" stroke="black"></rect>
-                        <rect id="gudang" class="area-pengelola" x="1826.72" y="278.562" width="243.209" height="186.379" fill="#D9D9D9" stroke="black"></rect>
-                        <rect id="kamar-pengelola" class="area-pengelola" x="1826.72" y="145.562" width="243" height="133" fill="#D9D9D9" stroke="black"></rect>
-                        <rect id="toilet" class="toilet" x="1826.72" y="671.562" width="243" height="170" fill="#A78A85" stroke="black"></rect>
                         <rect x="1185.72" y="837.562" width="104.455" height="3.87402" fill="#D9D9D9" stroke="black"></rect>
                         <rect x="1211.96" y="89.8657" width="82.6638" height="2.7876" fill="#D9D9D9" stroke="black"></rect>
 
@@ -547,21 +585,69 @@
         </main>
 
         <div id="desktop-tooltip"></div>
+        
         <div id="mobile-info-card" class="info-card">
-            <div class="info-card-header">
-                <h3 id="info-title">Nama Lapak</h3>
-                <button id="info-close">✕</button>
+            <button id="info-close" class="close-btn">✕</button>
+            <div class="info-card-image">
+                <img id="info-image" src="../../img/sayuran.png" alt="Foto Tenant">
+                <span id="info-badge" class="badge">KATEGORI</span>
             </div>
             <div class="info-card-body">
-                <p id="info-category">Kategori Lapak</p>
-                <a href="#" id="info-link" class="btn-kunjungi">Kunjungi Profil Toko</a>
+                <p id="info-id" class="kode">L000</p>
+                <h2 id="info-title">Nama Toko</h2>
+                <p id="info-desc">Deskripsi toko akan muncul di sini.</p>
+                
+                <a href="#" id="info-link" class="btn-primary" style="display: block; text-align: center;">Kunjungi Profil Toko</a>
             </div>
         </div>
+
         <!-- Footer -->
-        <div id="placeholder-footer">Ini footer</div>
+        <footer id="footer" class="footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="tentang">
+                        <h3>Pasar Sinpasa</h3>
+                        <p>
+                            Pasar Modern Sinpasa Summarecon Bandung hadir untuk melayani kebutuhan
+                            dari warga, penghuni dan pengunjung Summarecon Bandung.
+                        </p>
+                        <p>+62 895-1230-0903</p>
+                        <p>sinpasasummareconbdg@gmail.com</p>
+                    </div>
+                    
+                    <div class="ketentuan">
+                        <div class="info">
+                            <h4>Informasi</h4>
+                            <a href="snk.html" class="ketentuan">Syarat & Ketentuan</a>
+                            <a href="privasi.html" class="ketentuan">Kebijakan Privasi</a>
+                    </div>
+                    </div>
+                    
+                    <div class="info">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social">
+                            <span>
+                                <a href="https://www.instagram.com/pasarsinpasabandung/" target="_blank">
+                                    <img src="../../img/instagram.svg" alt="instagram-sinpasa">
+                                </a>                       
+                            </span>
+                            <span>
+                                <a href="https://www.tiktok.com/@pasarsinpasabandung" target="_blank">
+                                    <img src="../../img/tiktok.svg" alt="tiktok-sinpasa">
+                                </a>
+                            </span>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2024 Pasar Sinpasa Summarecon Bandung. All rights reserved.
+            </div>
+        </footer>
 
         <!-- Js -->
         <script src="../../js/main.js"></script>
-        <script src="../../js/loader.js"></script>
     </body>
 </html>
