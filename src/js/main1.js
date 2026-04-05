@@ -5,7 +5,8 @@ const saveData=document.querySelectorAll('.btn-save');
 const adminTrigger = document.getElementById('adminTrigger');
 const logoutMenu = document.getElementById('logoutMenu');
 const add=document.querySelector('.btn-market');
-
+const humbuger=document.querySelector('.icon-menu');
+const navbar=document.querySelector('.atas');
 const form = document.querySelector("form");
 
 if (form) {
@@ -74,3 +75,12 @@ if (saveData) {
         });
     });
 }
+
+//navbar
+if (humbuger && navbar) {
+        humbuger.addEventListener('click', function () {
+            // Menambah/menghapus class 'active' setiap kali diklik
+            navbar.classList.toggle('active');
+            console.log("Navbar berhasil diklik!"); 
+        });
+    }
