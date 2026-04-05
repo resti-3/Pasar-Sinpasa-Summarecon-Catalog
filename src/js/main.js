@@ -1,17 +1,13 @@
-// Guides
-// Variabel gunakan lowercase
-// Fungsi camelCase
-// CONSTANTA gunakan UPPERCASE
-
-
 // NAVBAR SEARCH
 const searchToggle = document.getElementById("searchToggle");
 const navSearch = document.querySelector(".nav-search");
 const navInput = document.getElementById("navSearchInput");
+const logo = document.getElementById("logo");
 
 if (searchToggle) {
   searchToggle.addEventListener("click", () => {
     navSearch.classList.toggle("active");
+    logo.classList.toggle("hidden");
     navInput.focus();
   });
 }
@@ -147,4 +143,12 @@ window.addEventListener("scroll", () => {
 window.addEventListener("DOMContentLoaded", () => {
   const firstLink = document.querySelector('nav a[data-section="beranda"]');
   if (firstLink) firstLink.classList.add("active");
+});
+
+// HAMBURGER
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.querySelector(".menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
 });
