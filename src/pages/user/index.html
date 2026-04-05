@@ -6,9 +6,46 @@
         <link rel="stylesheet" type="text/css" href="../../css/styles.css">
         <link rel="icon" type="image/x-icon" href="../../img/sinpasa-normal-svg.svg">
         <title>Pasar Modern Sinpasa</title>
-    </head>
-    <body>
-    <div id="placeholder-header"></div>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-small">
+                    <img src="../../img/LOGO_PASAR.svg"  id="logo">
+                </span>
+            </div>
+
+            <nav class="menu">
+                <a href="#hero" data-section="beranda">BERANDA</a>
+                <a href="katalog.html" data-section="kategori">Katalog</a>
+                <a href="#fasilitas" data-section="fasilitas">Fasilitas</a>
+                <a href="#denah" data-section="denah">Denah</a>
+                <a href="#testimoni" data-section="testimoni">Testimoni</a>
+                <a href="#footer" data-section="footer">TENTANG KAMI</a>
+            </nav>
+
+            <div class="nav-icon">
+                <div class="nav-search">
+                    <input type="text" id="navSearchInput" placeholder="Cari kategori atau toko..." />
+                    <button id="searchToggle">
+                        <div class="icons">
+                            <img src="../../img/search.svg">
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6" stroke="black" stroke-width="2"/>
+                        <line x1="3" y1="12" x2="21" y2="12" stroke="black" stroke-width="2"/>
+                        <line x1="3" y1="18" x2="21" y2="18" stroke="black" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <main>
         <section id="hero" class="hero">
     <div class="hero-content">
@@ -97,14 +134,65 @@
     </section>
 
     <section id="denah" class="denah">
-    <h2>Temukan Rute Belanja Anda</h2>
-    <p class="subtitle">
-        Gunakan denah interaktif kami untuk menemukan produk yang dicari lebih cepat.
-    </p>
+        <h2>Temukan Rute Belanja Anda</h2>
+        <p class="subtitle">
+            Gunakan denah interaktif kami untuk menemukan produk yang dicari lebih cepat.
+        </p>
 
-    <div class="denah-container">
-        <img src="../../img/Denah (1).svg" alt="Denah Pasar">
-    </div>
+        <div class="denah-container">
+            <img src="../../img/Denah (1).svg" alt="Denah Pasar">
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background:#4B7AA8"></div>
+                <span>Kios Besar</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#2C85B1"></div>
+                <span>Kios Kecil</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#589A67"></div>
+                <span>Kios F&amp;B/Kuliner</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#25C54E"></div>
+                <span>Lapak Sayur, Buah dan Jajanan</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#C36D8A"></div>
+                <span>Lapak Non-Halal</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#FF4F3B"></div>
+                <span>Pojok Kuliner</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#A78A85"></div>
+                <span>Toilet</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#ABA08E"></div>
+                <span>Galeri Dekranasda</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#DED24D"></div>
+                <span>Lapak Basah</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#EB8946"></div>
+                <span>Lapak Olahan dan Jajanan</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#8E9176"></div>
+                <span>Mushola</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background:#827E8E"></div>
+                <span>ATM Center</span>
+            </div>
+        </div>
     </section>
 
     <section id="testimoni" class="testimoni">
@@ -161,12 +249,55 @@
     </section>
     </main>
 
-    <!-- Footer -->
-    <div id="placeholder-footer">Ini footer</div>
+    
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="tentang">
+                    <h3>Pasar Sinpasa</h3>
+                    <p>
+                        Pasar Modern Sinpasa Summarecon Bandung hadir untuk melayani kebutuhan
+                        dari warga, penghuni dan pengunjung Summarecon Bandung.
+                    </p>
+                    <p>+62 895-1230-0903</p>
+                    <p>sinpasasummareconbdg@gmail.com</p>
+                </div>
+                
+                <div class="ketentuan">
+                    <div class="info">
+                        <h4>Informasi</h4>
+                        <a href="snk.html" class="ketentuan">Syarat & Ketentuan</a>
+                        <a href="privasi.html" class="ketentuan">Kebijakan Privasi</a>
+                </div>
+                </div>
+                
+                <div class="info">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social">
+                        <span>
+                            <a href="https://www.instagram.com/pasarsinpasabandung/" target="_blank">
+                                <img src="../../img/instagram.svg" alt="instagram-sinpasa">
+                            </a>                       
+                        </span>
+                        <span>
+                            <a href="https://www.tiktok.com/@pasarsinpasabandung" target="_blank">
+                                <img src="../../img/tiktok.svg" alt="tiktok-sinpasa">
+                            </a>
+                        </span>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2024 Pasar Sinpasa Summarecon Bandung. All rights reserved.
+        </div>
+    </footer>
 
     <!-- Js -->
     <script src="../../js/main.js"></script>
-    <script src="../../js/loader.js"></script>
+    
 
 
 </body>
