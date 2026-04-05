@@ -1519,6 +1519,7 @@ body{
     }
     .btn-edit{
         margin-bottom: 6px;
+<<<<<<< HEAD
 }
 }
 /* Responsive Mobil */
@@ -1612,6 +1613,8 @@ body{
     .data-input {
         flex-direction: column;
         gap: 10px;
+=======
+>>>>>>> 88124588525f7ac856fa961a8459d1c373a911c0
     }
 
     .data-left, .data-right {
