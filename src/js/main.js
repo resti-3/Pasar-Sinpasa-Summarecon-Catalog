@@ -1,49 +1,54 @@
 // BUNGKUS KE DALAM FUNGSI 1
-function headerInteraction(){
-  // NAVBAR SEARCH
-  const searchToggle = document.getElementById("searchToggle");
-  const navSearch = document.querySelector(".nav-search");
-  const navInput = document.getElementById("navSearchInput");
-  const logo = document.getElementById("logo");
-  
-  if (searchToggle) {
-    searchToggle.addEventListener("click", () => {
-      navSearch.classList.toggle("active");
-      logo.classList.toggle("hidden");
-      if (navInput) {
-        navInput.focus();
-      }
-    });
-  }
-  
-  if (navInput) {
-    navInput.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        const keyword = navInput.value.trim();
-        if (keyword !== "") {
-          window.location.href = `katalog.html?search=${encodeURIComponent(keyword)}`;
+document.addEventListener("DOMContentLoaded", function() {
+  function headerInteraction(){
+    // NAVBAR SEARCH
+    const searchToggle = document.getElementById("searchToggle");
+    const navSearch = document.querySelector(".nav-search");
+    const navInput = document.getElementById("navSearchInput");
+    const logo = document.getElementById("logo");
+    
+    if (searchToggle) {
+      searchToggle.addEventListener("click", () => {
+        navSearch.classList.toggle("active");
+        logo.classList.toggle("hidden");
+        if (navInput) {
+          navInput.focus();
         }
-      }
-    });
+      });
+    }
+    
+    if (navInput) {
+      navInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          const keyword = navInput.value.trim();
+          if (keyword !== "") {
+            window.location.href = `katalog.html?search=${encodeURIComponent(keyword)}`;
+          }
+        }
+      });
+    }
+    
+    // DEFAULT ACTIVE 
+    const firstLink = document.querySelector('nav a[data-section="beranda"]');
+    const currentPage = window.location.pathname.split("/").pop();
+    if (firstLink && (currentPage === "index.html" || currentPage === "")) {
+      firstLink.classList.add("active");
+    }
+    
+    // HAMBURGER
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".menu");
+    
+    if (hamburger && navMenu) {
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    }
   }
   
-  // DEFAULT ACTIVE 
-  const firstLink = document.querySelector('nav a[data-section="beranda"]');
-  const currentPage = window.location.pathname.split("/").pop();
-  if (firstLink && (currentPage === "index.html" || currentPage === "")) {
-    firstLink.classList.add("active");
-  }
-  
-  // HAMBURGER
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".menu");
-  
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  }
-}
+  headerInteraction();
+  initScrollSpy();
+});
 
 // KATALOG (Aman)
 document.addEventListener("DOMContentLoaded", function () {
