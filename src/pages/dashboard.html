@@ -19,10 +19,10 @@
         </div>
         <nav class="atas">
             <ul>
-                <li><a href="#"><i class="fa-solid fa-dashboard"></i>Dashboard</a></li>
-                <li><a href="#"><i class="fa-solid fa-box"></i>Tenant Management</a></li>
-                <li><a href="#"><i class="fa-solid fa-gear"></i>Market Setting</a></li>
-                <li><a href="#"><i class="fa-solid fa-user"></i>User Management</a></li>
+                <li><a href="dashboard.html"><i class="fa-solid fa-dashboard"></i>Dashboard</a></li>
+                <li><a href="tenant.html"><i class="fa-solid fa-box"></i>Tenant Management</a></li>
+                <li><a href="setting-market.html"><i class="fa-solid fa-gear"></i>Market Setting</a></li>
+                <li><a href="user-management.html"><i class="fa-solid fa-user"></i>User Management</a></li>
             </ul>
         </nav>
         <nav class="bawah">
@@ -41,12 +41,15 @@
                 </div>
             </div>
             <div class="header-right">
-                <div class="admin-profile">
+                <div class="admin-profile" id="adminTrigger">
                     <div class="admin-teks">
                         <i class="fa-solid fa-bell"></i>
-                        <span class="role">Admin</span>
-                    </div>
+                        <p class="role">Admin</p>
+                        </div>
                     <img src="https://i.pinimg.com/736x/61/eb/2e/61eb2e74a5d30179a2564459d0850ab9.jpg" alt="Foto dari belakang">
+                    <div class="dropdown-menu" id="logoutMenu">
+                        <a href="login.html" id="btnLogout">Logout</a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -147,11 +150,11 @@
                 <h2>Sinpasa Summarecon Mall <br> Bandung</h2>
                 <p>Recognized for outstanding visitor engagement this <br> month. Their recent workshop series attacted over
                     <br>450 unique attendes, boosting traffic by <br>18%</p>
-                <button type="submit" class="btn-detail">View Tenant Detail</button>
+                <button type="submit" class="btn-detail">View All Tenant </button>
                 </div>
         </section>
     </div>
     </div>
-    <script src="../router.js"></script>
+    <script src="../js/main1.js"></script>
 </body>
 </html>

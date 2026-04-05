@@ -23,7 +23,13 @@
                     </div>
                     <div class="photo">
                         <div class="photo-left">
-                            <p>Upoad Logo</p>
+                            <label for="file-upload" class="custom-upload">
+                                <div class="upload-content">
+                                    <span class="icon">📷</span>
+                                    <p>Klik atau Seret Foto ke Sini</p>
+                                </div>
+                            </label>
+                                <input id="file-upload" type="file" accept="image/*" />
                         </div>
                         <div class="photo-right">
                             <p class="title">Market Emblem</p>
@@ -92,10 +98,8 @@
                 </div>
                 <div class="key">
                     <div class="keyword">
-                        <p class="kunci">kuliner x</p>
-                        <p class="kunci">buah x</p>
-                        <p class="kunci">daging x</p>
-                        <p>Add Tag..</p>
+                        <label for="search"></label>
+                        <input type="text" id="search" placeholder="buah X or add tag...">
                     </div>
                     <div class="sosial-media">
                         <div class="sosmed">
@@ -131,5 +135,6 @@
             </section>
         </div>
     </div>
+    <script src="../js/main1.js"></script>
 </body>
 </html>
