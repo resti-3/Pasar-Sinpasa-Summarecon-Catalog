@@ -12,9 +12,9 @@
     <header class="navbar">
         <div class="container">
             <div class="logo">
-            <span class="logo-small">
-                <img src="../img/LOGO_PASAR.svg">
-            </span>
+                <span class="logo-small">
+                    <img src="../img/LOGO_PASAR.svg"  id="logo">
+                </span>
             </div>
 
             <nav class="menu">
@@ -27,7 +27,22 @@
             </nav>
 
             <div class="nav-icon">
-                <img src="../img/search.svg">
+                <div class="nav-search">
+                    <input type="text" id="navSearchInput" placeholder="Cari kategori atau toko..." />
+                    <button id="searchToggle">
+                        <div class="icons">
+                            <img src="../img/search.svg">
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6" stroke="black" stroke-width="2"/>
+                        <line x1="3" y1="12" x2="21" y2="12" stroke="black" stroke-width="2"/>
+                        <line x1="3" y1="18" x2="21" y2="18" stroke="black" stroke-width="2"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </header>
@@ -38,11 +53,13 @@
     <div class="detail-container">
 
         <div class="detail-image">
-        <img src="../img/sayuran.png" alt="sayuran">
+        <img src="../img/bandeng_cabut_duri.jpeg" alt="bandeng">
         </div>
 
         <div class="detail-content">
-        <h1>Toko Segar Abadi</h1>
+        <h1>Bandeng Cabut Duri</h1>
+
+        
 
         <div class="info">
             <div class="info-item">
@@ -52,26 +69,26 @@
 
             <div class="info-item">
             <span>Jam Operasional</span>
-            <p>06.00 – 15.00 WIB</p>
+            <p>09.00 – 20.00 WIB</p>
             </div>
 
             <div class="info-item">
             <span>Alamat</span>
-            <p>Jl. Raya Sukamaju No. 45, Bandung, Jawa Barat</p>
+            <p>Jl. Soekarno Hatta No. 88, Bandung, Jawa Barat</p>
             </div>
 
             <div class="info-item">
             <span>Kontak</span>
-            <p>Telepon: 0812-3456-7890</p>
-            <p>WhatsApp: 0812-3456-7890</p>
+            <p>Telepon: 0813-5566-7788</p>
+            <p>WhatsApp: 0813-5566-7788</p>
             </div>
 
             <div class="info-item">
             <span>Deskripsi</span>
             <p>
-                Segar Abadi merupakan toko yang menyediakan berbagai jenis buah dan sayur segar yang didistribusikan langsung dari petani lokal. 
-                Produk yang dijual dipilih dengan standar kualitas untuk memastikan kesegaran dan kebersihan tetap terjaga. 
-                Toko ini melayani kebutuhan harian konsumen dengan harga yang terjangkau.
+                Bandeng Cabut Duri merupakan toko yang menyediakan olahan ikan bandeng tanpa duri yang praktis dan siap dikonsumsi. 
+                Produk diolah dengan teknik khusus untuk menjaga cita rasa dan tekstur ikan tetap lembut. 
+                Toko ini cocok bagi pelanggan yang ingin menikmati bandeng tanpa repot, baik untuk konsumsi pribadi maupun oleh-oleh.
             </p>
             </div>
         </div>
@@ -86,7 +103,7 @@
     
 
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="footer-container">
             <div class="footer-col">
                 <div class="tentang">
@@ -99,11 +116,11 @@
                     <p>sinpasasummareconbdg@gmail.com</p>
                 </div>
                 
-            <div class="menu">
+                <div class="ketentuan">
                     <div class="info">
                         <h4>Informasi</h4>
-                        <a href="snk.html" class="menu">Syarat & Ketentuan</a>
-                        <a href="privasi.html" class="menu">Kebijakan Privasi</a>
+                        <a href="snk.html" class="ketentuan">Syarat & Ketentuan</a>
+                        <a href="privasi.html" class="ketentuan">Kebijakan Privasi</a>
                 </div>
                 </div>
                 
@@ -131,5 +148,7 @@
             © 2024 Pasar Sinpasa Summarecon Bandung. All rights reserved.
         </div>
     </footer>
+
+<script src="../js/main.js"></script>
 </body>
 </html>
