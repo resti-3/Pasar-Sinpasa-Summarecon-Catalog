@@ -549,6 +549,39 @@ nav a.active::after {
   text-transform: none;
 }
 
+.ketentuan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: stretch;
+    justify-content: start;
+    text-decoration: none;
+    color: #40493D;
+    font-weight: 500;
+    font-size: small;
+    font-family: 'Be Vietnam Pro';
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+.ketentuan :hover {
+  color: var(--green-normal-hover);
+}
+
+.ketentuan :active {
+  color: var(--green-normal-active);
+}
+
+.ketentuan a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #40493D;
+  font-weight: 500;
+  text-align: center;
+  font-size: small;
+}
+
+
 .info h4 {
   margin-bottom: 1rem;
   letter-spacing: 0;
@@ -1039,7 +1072,7 @@ nav a.active::after {
   max-width: 100%;
 }
 
-.menu a {
+.menu {
     position: absolute;
     top: 70px;
     left: 0;
@@ -1057,7 +1090,7 @@ nav a.active::after {
     padding: 12px 0;
   }
 
-  .menu a.active {
+  .menu.active {
     display: flex;
   }
 
