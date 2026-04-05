@@ -8,28 +8,22 @@ const add=document.querySelector('.btn-market');
 
 const form = document.querySelector("form");
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    if (email === "admin@sinpasa.com" && password === "12345678") {
-        localStorage.setItem("isLogin", "true");
-
-        console.log("Login sukses, redirect...");
-
-        window.location.href = "dashboard.html";
-    } else {
-        alert("Login gagal");
-    }
-});
-
-//Login
-if(logIn){
-    logIn.addEventListener('click', function(e){
+if (form) {
+    form.addEventListener("submit", function (e) {
         e.preventDefault();
-        window.location.href='dashboard.html';
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (email === "admin@sinpasa.com" && password === "12345678") {
+            localStorage.setItem("isLogin", "true");
+
+            console.log("Login sukses, redirect...");
+
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Login gagal");
+        }
     });
 }
 if(signUp){
