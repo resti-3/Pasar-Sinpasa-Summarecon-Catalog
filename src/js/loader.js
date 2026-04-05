@@ -1,6 +1,5 @@
 // Fungsi untuk memuat komponen
 function loadComponent(elementId, filePath) {
-    // Kita return fetch-nya agar bisa dilacak kapan selesainya
     return fetch(filePath)
         .then(response => {
             if (!response.ok) throw new Error("Gagal memuat file: " + filePath);
@@ -14,36 +13,36 @@ function loadComponent(elementId, filePath) {
 
 // Fungsi untuk menandai menu yang sedang aktif
 function setActiveMenu() {
-    // Ambil nama file dari URL (misal: "katalog.html" atau "index.html")
     let currentPage = window.location.pathname.split("/").pop();
-    
-    // Jika path kosong (hanya "/"), asumsikan itu adalah index.html
-    if (currentPage === "") currentPage = "index.html";
+    if (currentPage === "index.html" || currentPage === "") return;
 
-    // Cari semua elemen <a> di dalam navbar kamu
     const navLinks = document.querySelectorAll(".menu a");
-
     navLinks.forEach(link => {
-        // Ambil atribut href dari masing-masing link
-        const linkHref = link.getAttribute("href");
-
-        // Jika cocok, tambahkan class active
+        const linkHref = link.getAttribute("href").split("/").pop();
         if (linkHref === currentPage) {
             link.classList.add("active");
         }
     });
 }
 
-// Jalankan saat struktur HTML utama sudah dimuat oleh browser
+// Jalankan saat struktur HTML utama sudah dimuat
 document.addEventListener("DOMContentLoaded", () => {
     
     // 1. Muat header
     loadComponent("placeholder-header", "components/header.html")
-        .then(() => {
-            // 2. SETELAH header sukses dimuat, jalankan fungsi penanda menu
+        .then(() => { 
             setActiveMenu();
+            
+            // Panggil interaksi header
+            if (typeof headerInteraction === "function"){
+                headerInteraction();
+            }
+            // Panggil scrollspy SETELAH header muncul
+            if (typeof initScrollSpy === "function"){
+                initScrollSpy();
+            }
         });
 
-    // 3. Muat footer secara bersamaan
+    // 3. Muat footer
     loadComponent("placeholder-footer", "components/footer.html");
 });
