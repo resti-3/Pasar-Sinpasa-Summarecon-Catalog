@@ -1027,42 +1027,37 @@ nav a.active::after {
   .navbar .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:center;
   flex-wrap: wrap;
+  margin: 0;
+  padding-top: 0;
   }
 
   .nav-search {
   flex-shrink: 0;
+  max-width: 100%;
 }
 
-  nav a {
+.menu a {
     position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.4);
+    background: white;
+
+    display: none;
 
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
+    gap: 16px;
 
-    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
   }
 
-  nav a.active {
+  .menu a.active {
     display: flex;
-  }
-
-  nav a::after {
-  content: none;
-  position: relative;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: #16a34a;
-  transition: 0.3s;
   }
 
   .logo-small img.hidden {
