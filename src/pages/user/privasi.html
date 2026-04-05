@@ -27,7 +27,24 @@
             </nav>
 
             <div class="nav-icon">
-                <img src="../img/search.svg">
+                <div class="nav-search">
+                    <input type="text" id="navSearchInput" placeholder="Cari kategori atau toko..." />
+                    <button id="searchToggle">
+                        <div class="icons">
+                            <img src="../img/search.svg">
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="icons">
+                    <svg class="hamburger" viewBox='0 0 10 8' width='24' >
+                        <path 
+                            d='M1 1h8M1 4h 8M1 7h8' 
+                            stroke='#000' 
+                            stroke-width='1.5' 
+                            stroke-linecap='round'/>
+                    </svg>
+                </div>
             </div>
         </div>
     </header>
@@ -146,5 +163,7 @@
             © 2024 Pasar Sinpasa Summarecon Bandung. All rights reserved.
         </div>
     </footer>
+<script src="../js/main.js"></script>
+
 </body>
 </html>

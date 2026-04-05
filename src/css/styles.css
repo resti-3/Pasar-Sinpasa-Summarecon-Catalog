@@ -142,7 +142,7 @@ nav a.active::after {
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -322,7 +322,7 @@ nav a.active::after {
   z-index: 2;
 }
 
-/* 🔥 SIZE VARIATION */
+/* CARD SIZE  */
 
 /* 2x2 */
 
@@ -664,7 +664,7 @@ nav a.active::after {
 
 .search-bar img {
   align-items: center;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .filter {
@@ -864,7 +864,7 @@ nav a.active::after {
 }
 
 /* Desktop size */
-@media (min-width: 1024px) {
+@media (min-width: 1080px) {
   .hero::after{
     transition: 0.4s;
   }
@@ -898,20 +898,121 @@ nav a.active::after {
 }
 
 /* Tablet size */
-@media screen and (480px < width <= 768px) {
+@media screen and (640px < width <= 1080px) {
   .menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
   }
+
+  .hamburger {
+    display: block;
+    margin-left: 2rem;
+  }
+
+  .nav-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-items: end;
+    justify-self: center;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+  .hero {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  height: 420px;
+  background: url('../img/yana+mulyana-1393199944.jpg') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.2)
+  );
+}
+
+  .hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--text-white);
+  z-index: 2;
+  max-width: 900px;
+  padding: 40px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  font-family: 'Be Vietnam Pro';
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.btn-primary {
+  background: var(--green-normal-active);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: small;
+  font-family: 'Be Vietnam Pro';
+}
+
+  .detail {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+  .fasilitas-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .testimoni-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .testi-card.big{
+    transform: scale(1);
+  }
+
+  header .menu {
+    display: none;
+  }
 }
 
 /* Mobile Size */
-@media screen and (width <= 480px) {
+@media screen and (width <= 640px) {
   
   .hamburger {
     display: block;
     margin-left: 2rem;
+    flex-shrink: 0;
+    margin: 0 0 0 10px;
+  }
+
+  .container {
+    margin: 0;
   }
   
   .nav-icon{
@@ -922,6 +1023,149 @@ nav a.active::after {
     justify-self: center;
     margin: 1rem 1rem 1rem 1rem;
   }
+
+  .navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+
+  .nav-search {
+  flex-shrink: 0;
+}
+
+  nav a {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    display: none;
+  }
+
+  nav a.active {
+    display: flex;
+  }
+
+  nav a::after {
+  content: none;
+  position: relative;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #16a34a;
+  transition: 0.3s;
+  }
+
+  .logo-small img.hidden {
+  display: none;
+  border-radius: 10px;
+  padding-left: 0;
+  }
+
+  header .menu {
+    display: none;
+  }
+
+  header .menu.active {
+    display: flex;
+  }
+
+  .hero {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 0;
+  height: 640px;
+  border-radius: 0;
+  background: url('../img/yana+mulyana-1393199944.jpg') center/cover no-repeat;
+  position: relative;
+  overflow: visible;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.2)
+  );
+}
+
+  .hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--text-white);
+  z-index: 2;
+  max-width: 900px;
+  padding: 40px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  font-family: 'Be Vietnam Pro';
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.btn-primary {
+  background: var(--green-normal-active);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: small;
+  font-family: 'Be Vietnam Pro';
+}
+
+.kategori-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 180px);
+  gap: 16px;
+}
+
+.large {
+  grid-column: span 2;
+  grid-row: span 2;
+  font-size: larger;
+}
+
+/* 1x2 (tinggi) */
+.tall {
+  grid-column: span 2;
+  grid-row: span 1;
+  font-size: large;
+}
+
+/* 2x1 (lebar) */
+.wide {
+  grid-column: span 2;
+  font-size: large;
+}
+
+/* 1x1 */
+.small {
+  grid-column: span 1;
+  grid-row: span 1;
+  font-size: medium;
+}
   
   .fasilitas-grid{
     display: flex;
@@ -937,7 +1181,60 @@ nav a.active::after {
     transform: scale(1);
   }
 
-  .menu {
-    display: none;
+  .footer-col {
+  display: grid;
+  grid-template-columns: 2fr;
+  gap: 3rem;
   }
+
+  .tentang {
+  grid-column: span 1;
+}
+
+/* Halaman katalog */
+.katalog-list {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto 80px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+}
+
+.search-bar input {
+  padding: 14px 0;
+}
+
+.search-bar img {
+  margin-right: 1rem;
+}
+
+/* Halaman toko */
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: center;
+}
+
+.detail-image {
+  position: relative;
+  margin-bottom: 1rem;
+  max-width: 320px;
+  height: 100%;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.info-item p {
+  text-align: justify;
+  margin-right: 0.3rem;
+}
+
 }
